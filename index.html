@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/home.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,7 +21,6 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="assets/css/home.css" />
     <script src="assets/js/script.js" defer></script>
     <title>3CroreFarmers</title>
   </head>
@@ -29,16 +29,9 @@
       <div class="wizard-container">
         <div class="image-container">
           <img
-            class="desktop"
+            class="welcome-image"
             src="assets/images/initial-banner.jpg"
-            width=""
             height="600"
-            alt=""
-          />
-          <img
-            class="mob"
-            src="assets/images/initial-banner.jpg"
-            width=""
             
             alt=""
           />
@@ -52,7 +45,7 @@
           <img src="assets/images/hero-banner.jpg" width="700" />
         </div>
       </header>
-      <section class="hero-section container">
+      <section class="hero-section">
         <h1 class="hero-heading">
           “Oust AAP Government In Punjab” – SFJ Launches 3 Crore Farmers Aid
           Drive
@@ -65,7 +58,7 @@
         </h2>
         <form class="form">
           <div class="form-group">
-            <label for="inputState">Your Name</label>
+            <label for="inputState">Your Name <span class="required-red">*</span></label>
             <input
               type="text"
               name="name"
@@ -83,12 +76,13 @@
               placeholder="Address"
               required
             />
-            <label for="inputState">Sikh</label>
+            <label for="inputState">Religion</label>
             <select
               class="form-control form-input"
-              class="form-input"
+              name="religion"
               id="inputState"
             >
+              <option value="">Religion</option>
               <option value="Sikh">Sikh</option>
               <option value="Hindu">Hindu</option>
               <option value="Muslim">Muslim</option>
@@ -96,17 +90,17 @@
               <option value="Christian">Christian</option>
               <option value="Other">Other</option>
             </select>
-            <label for="inputState">Mobile Number</label>
+            <label for="inputState">Mobile Number <span class="required-red">*</span></label>
             <span class="number-input-container">
               <input
-                type="number"
-                name="number"
+                type="text"
+                name="mobile"
                 class="form-control form-input form-input-number"
                 id="inputState"
                 placeholder=""
                 required
               />
-              <span class="dial-code"></span>
+              <!-- <span class="dial-code"></span> -->
             </span>
             <label for="inputState">Email Address</label>
             <input
@@ -120,58 +114,60 @@
             <label for="inputState">Name of Family Member Who Died:</label>
             <input
               type="text"
-              name="familyMemberName"
+              name="member"
               class="form-control form-input"
               id="inputState"
               placeholder="Name of Family Member Who Died"
               required
             />
             <button type="submit" class="form-submit-btn">Submit</button>
-            <div class="modal-bg">
-              <div class="modal-container">
-                <div class="custom-modal-header">
-                  <div class="custom-modal-close">X</div>
+      </section>
+      <section>
+        <div class="modal-bg">
+          <div class="modal-container">
+            <div class="custom-modal-header">
+              <div class="custom-modal-close">X</div>
+            </div>
+            <div class="custom-modal-body">
+              <div class="custom-modal-body-text">
+                <!-- Thank you for filling up the form. -->
+              </div>
+            </div>
+            <div class="custom-modal-footer">
+              <p class="modal-footer-heading">Share on social media</p>
+              <div class="footer-bottom-container">
+                <div class="footer-icons-container">
+                  <span
+                    ><a
+                      href="https://www.facebook.com/sharer/sharer.php?u=https%3A//3crore4farmers.net/#"
+                      class="fa fa-facebook"
+                    ></a
+                  ></span>
+                  <span
+                    ><a
+                      href="https://twitter.com/intent/tweet?text=https%3A//3crore4farmers.net/"
+                      class="fa fa-twitter"
+                    ></a
+                  ></span>
+                  <span
+                    ><a
+                      href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//3crore4farmers.net/&title=&summary=&source="
+                      class="fa fa-linkedin"
+                    ></a
+                  ></span>
                 </div>
-                <div class="custom-modal-body">
-                  <div class="custom-modal-body-text">
-                    <!-- Thank you for filling up the form. -->
-                  </div>
-                </div>
-                <div class="custom-modal-footer">
-                  <p class="modal-footer-heading">Share on social media</p>
-                  <div class="footer-bottom-container">
-                    <div class="footer-icons-container">
-                      <span
-                        ><a
-                          href="https://www.facebook.com/sharer/sharer.php?u=https%3A//3crore4farmers.net/#"
-                          class="fa fa-facebook"
-                        ></a
-                      ></span>
-                      <span
-                        ><a
-                          href="https://twitter.com/intent/tweet?text=https%3A//3crore4farmers.net/"
-                          class="fa fa-twitter"
-                        ></a
-                      ></span>
-                      <span
-                        ><a
-                          href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//3crore4farmers.net/&title=&summary=&source="
-                          class="fa fa-linkedin"
-                        ></a
-                      ></span>
-                    </div>
-                    <div class="footer-close-btn-container">
-                      <button
-                        type="button"
-                        class="custom-modal-close"
-                      >
-                        Close
-                      </button>  
-                    </div>
-                  </div>
+                <div class="footer-close-btn-container">
+                  <button
+                    type="button"
+                    class="custom-modal-close"
+                  >
+                    Close
+                  </button>  
                 </div>
               </div>
             </div>
+          </div>
+        </div>
       </section>
       <footer class="site-footer container">
         <div class="footer-content-container">
@@ -206,8 +202,8 @@
       const wizardBtn = document.querySelector('.wizard-btn ');
 
       function hideBefore() {
-        before.style.display = 'none';
-        after.style.display = 'block';
+        before.classList.add('slide-active');
+        after.classList.add('after-active');
       }
       setTimeout(() => {
         hideBefore();
