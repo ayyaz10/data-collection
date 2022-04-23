@@ -67,7 +67,7 @@ form.addEventListener('submit', (e) => {
     // https://nodejs-server-api1.herokuapp.com
       fetch('https://datapackage-1.herokuapp.com/userdata', {
         method: "post",
-        // mode: 'cors',
+        mode: 'cors',
         // credentials: 'include',
         headers: {
           'Content-Type': 'application/json'
